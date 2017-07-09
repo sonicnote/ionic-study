@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>ログイン</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+
+    <ion-item>
+        <ion-input type="text" placeholder="ログインID"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input type="password" placeholder="パスワード"></ion-input>
+    </ion-item>
+
+    </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="onClick()">ログイン</button>
+  </div>
+
+</ion-content>
