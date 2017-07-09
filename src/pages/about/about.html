@@ -1,16 +1,130 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>健康情報登録</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+    <ion-list no-border>
 
+        <ion-list-header>
+            測定日
+        </ion-list-header>
+        <ion-item>
+            <ion-label>測定日</ion-label>
+            <ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+
+        
+    </ion-list>
+
+    <ion-list no-border>
+
+        <ion-list-header>
+            測定データ
+        </ion-list-header>
+
+        <ion-item>
+            <ion-icon name='body' item-start></ion-icon>
+            <ion-label>最高血圧</ion-label>
+            <ion-select [(ngModel)]="gaming">
+                <ion-option value="nes">95</ion-option>
+                <ion-option value="n64">96</ion-option>
+                <ion-option value="ps">97</ion-option>
+                <ion-option value="genesis">98</ion-option>
+                <ion-option value="saturn">99</ion-option>
+                <ion-option value="snes">100</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name='body' item-start></ion-icon>
+            <ion-label>最低血圧</ion-label>
+            <ion-select [(ngModel)]="gaming2">
+                <ion-option value="nes">95</ion-option>
+                <ion-option value="n64">96</ion-option>
+                <ion-option value="ps">97</ion-option>
+                <ion-option value="genesis">98</ion-option>
+                <ion-option value="saturn">99</ion-option>
+                <ion-option value="snes">100</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name='body' item-start></ion-icon>
+            <ion-label>体温</ion-label>
+            <ion-select [(ngModel)]="gaming3">
+                <ion-option value="nes">95</ion-option>
+                <ion-option value="n64">96</ion-option>
+                <ion-option value="ps">97</ion-option>
+                <ion-option value="genesis">98</ion-option>
+                <ion-option value="saturn">99</ion-option>
+                <ion-option value="snes">100</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name='body' item-start></ion-icon>
+            <ion-label>血圧</ion-label>
+            <ion-select [(ngModel)]="gaming4">
+                <ion-option value="nes">95</ion-option>
+                <ion-option value="n64">96</ion-option>
+                <ion-option value="ps">97</ion-option>
+                <ion-option value="genesis">98</ion-option>
+                <ion-option value="saturn">99</ion-option>
+                <ion-option value="snes">100</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-list>
+
+        <ion-list-header>
+            食事状況
+        </ion-list-header>
+
+        <ion-item>
+            <ion-toggle checked="false"></ion-toggle>
+            <ion-label>
+                朝食
+            </ion-label>
+            <ion-icon name='sunny' item-start></ion-icon>
+        </ion-item>
+
+        <ion-item>
+            <ion-toggle checked="false"></ion-toggle>
+            <ion-label>
+                昼食
+            </ion-label>
+            <ion-icon name='nutrition' item-start></ion-icon>
+        </ion-item>
+
+        <ion-item>
+            <ion-toggle checked="false"></ion-toggle>
+            <ion-label>
+                夕食
+            </ion-label>
+            <ion-icon name='moon' item-start></ion-icon>
+        </ion-item>
+
+        <ion-item>
+            <ion-toggle checked="false"></ion-toggle>
+            <ion-label>
+                飲酒
+            </ion-label>
+            <ion-icon name='beer' item-start></ion-icon>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>
+            コメント
+        </ion-list-header>
+        <ion-item>
+            <ion-input type="text" placeholder="こちらに入力してください。"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button full>情報登録</button>
 </ion-content>
-
-<ion-nav #mycontent [root]="rootPage"></ion-nav>
